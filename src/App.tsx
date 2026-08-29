@@ -12,6 +12,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import { useGLTF, useTexture } from "@react-three/drei";
 import cardGLB from "@/components/Lanyard/card.glb";
 import lanyard from "@/components/Lanyard/lanyard.png";
+import { useState } from "react";
 
 import "./App.css";
 export function preloadLanyardAssets() {
@@ -19,6 +20,9 @@ export function preloadLanyardAssets() {
   useTexture.preload(lanyard);
 }
 function App() {
+  // State untuk melacak active section
+  const [activeSection, setActiveSection] = useState<string>("hero");
+
   // Fungsi helper untuk smooth scroll ke section berdasarkan ID
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -28,6 +32,7 @@ function App() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id);
     }
   };
 
@@ -41,7 +46,11 @@ function App() {
               <NavigationMenuLink
                 href="#hero"
                 onClick={(e) => scrollToSection(e, "hero")}
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} ${
+                  activeSection === "hero"
+                    ? "bg-muted text-accent-foreground"
+                    : ""
+                }`}
               >
                 Home
               </NavigationMenuLink>
@@ -51,7 +60,11 @@ function App() {
               <NavigationMenuLink
                 href="#about"
                 onClick={(e) => scrollToSection(e, "about")}
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} ${
+                  activeSection === "about"
+                    ? "bg-accent text-accent-foreground"
+                    : ""
+                }`}
               >
                 About
               </NavigationMenuLink>
@@ -61,7 +74,11 @@ function App() {
               <NavigationMenuLink
                 href="#projects"
                 onClick={(e) => scrollToSection(e, "projects")}
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} ${
+                  activeSection === "projects"
+                    ? "bg-accent text-accent-foreground"
+                    : ""
+                }`}
               >
                 Projects
               </NavigationMenuLink>
@@ -71,7 +88,11 @@ function App() {
               <NavigationMenuLink
                 href="#contact"
                 onClick={(e) => scrollToSection(e, "contact")}
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} ${
+                  activeSection === "contact"
+                    ? "bg-accent text-accent-foreground"
+                    : ""
+                }`}
               >
                 Contact
               </NavigationMenuLink>

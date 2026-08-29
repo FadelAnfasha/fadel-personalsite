@@ -402,7 +402,7 @@ function Band({
           resolution={isMobile ? [1000, 2000] : [1000, 1000]}
           useMap={1}
           map={texture}
-          repeat={[-1, 1]}
+          repeat={isMobile ? [-1, 1] : [-1, 1]}
           lineWidth={lanyardWidth}
         />
       </mesh>

@@ -135,7 +135,7 @@
   html {
     @apply font-sans;
     overflow-x: hidden;
-    /* overflow-y:hidden; */
+    overflow-y:hidden;
   }
   
   /* Sembunyikan scrollbar di semua browser */
