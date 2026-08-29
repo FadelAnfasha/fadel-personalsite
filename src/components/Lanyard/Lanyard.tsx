@@ -323,7 +323,8 @@ function Band({
 
   return (
     <>
-      <group position={[2, 4, 0]}>
+      <group position={isMobile ? [0, 4, 0] : [2, 4, 0]}>
+        {" "}
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody
           position={[0.5, 0, 0]}
@@ -399,7 +400,7 @@ function Band({
           color="white"
           depthTest={false}
           resolution={isMobile ? [1000, 2000] : [1000, 1000]}
-          useMap
+          useMap={1}
           map={texture}
           repeat={[-1, 1]}
           lineWidth={lanyardWidth}
