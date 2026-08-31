@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import MorphSlider from "@/components/MorphSlider";
-import SpotlightCard from "@/components/ui/SpotlightCard";
+// import SpotlightCard from "@/components/ui/SpotlightCard";
 import { Building2, Calendar, Award, ChevronRight } from "lucide-react";
 
 const careerJourney = [
@@ -31,28 +31,26 @@ const careerJourney = [
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1600&auto=format&fit=crop",
     icon: "/icons/procodecg.png",
     caption: "ProCodeCG",
-    role: "Fullstack Web Developer",
-    period: "2021 - 2023",
+    role: "Internship - Data Annotation",
+    period: "2021 - 2021",
     location: "Bandung, Indonesia",
     achievements: [
-      "Mengembangkan 10+ web app klien menggunakan Laravel & Vue.js",
-      "Mengoptimalkan query database PostgreSQL hingga mengurangi waktu response API sebesar 60%",
+      "Executed data labelling for building blueprint to train Maching Learning model accuracy in detecting house corner types.",
     ],
-    skills: ["Laravel", "Vue.js", "PostgreSQL", "Docker"],
+    skills: ["Python", "Pandas", "TensorFlow"],
   },
   {
     image:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop",
     icon: "/icons/telkom.png",
-    caption: "Creative Media Agency",
-    role: "Junior Web Developer",
+    caption: "Telkom Indonesia",
+    role: "Internship - Payment, Finance, & Collection Department",
     period: "2020 - 2021",
-    location: "Jakarta, Indonesia",
+    location: "Karawang, Indonesia",
     achievements: [
-      "Membangun landing page interaktif berbasis GSAP & Tailwind CSS",
-      "Mengintegrasikan CMS Headless untuk kemudahan pengelolaan konten klien",
+      "Creating Telegram ChatBot for real-time monitoring of customers subscription statuses.",
     ],
-    skills: ["HTML/CSS", "JavaScript", "GSAP", "WordPress"],
+    skills: ["Google Apps Script", "Telegram Webhook"],
   },
 ];
 
