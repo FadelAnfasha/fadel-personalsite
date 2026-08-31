@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import SpotlightCard from "@/components/ui/SpotlightCard";
+import LogoLoop from "@/components/LogoLoop";
 
 import {
   CardContent,
@@ -8,6 +9,63 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Download, Code2, Bot, Rocket } from "lucide-react";
+
+const imageLogos = [
+  {
+    src: "/public/icons/laravel.svg",
+    alt: "Laravel",
+    label: "Laravel",
+    href: "https://laravel.com",
+  },
+  {
+    src: "/public/icons/vue.svg",
+    alt: "Vue",
+    label: "Vue.js",
+    href: "https://vuejs.org",
+  },
+  {
+    src: "/public/icons/react.svg",
+    alt: "React",
+    label: "React",
+    href: "https://react.dev",
+  },
+  {
+    src: "/public/icons/git.svg",
+    alt: "Github",
+    label: "Git",
+    href: "https://github.com/FadelAnfasha",
+  },
+  {
+    src: "/public/icons/python.svg",
+    alt: "Python",
+    label: "Python",
+    href: "https://www.python.org",
+  },
+  {
+    src: "/public/icons/pandas.svg",
+    alt: "Pandas",
+    label: "Pandas",
+    href: "https://pandas.pydata.org",
+  },
+  {
+    src: "/public/icons/tensorflow.svg",
+    alt: "TensorFlow",
+    label: "TensorFlow",
+    href: "https://www.tensorflow.org",
+  },
+  {
+    src: "/public/icons/ollama.svg",
+    alt: "Ollama",
+    label: "Ollama",
+    href: "https://ollama.ai",
+  },
+  {
+    src: "/public/icons/postgresql.svg",
+    alt: "PostgreSQL",
+    label: "PostgreSQL",
+    href: "https://www.postgresql.org",
+  },
+];
 
 export default function AboutSection() {
   return (
@@ -22,10 +80,10 @@ export default function AboutSection() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             {/* Judul Section */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-4">
                 About Me
               </h2>
-              <div className="h-1 w-20 bg-primary rounded-full"></div>
+              <div className="h-1 w-56 bg-primary rounded-full mx-auto md:mx-0"></div>
             </div>
 
             {/* Deskripsi Naratif */}
@@ -60,6 +118,38 @@ export default function AboutSection() {
                   <span>Download CV</span>
                 </Button>
               </a>
+            </div>
+
+            {/* What I Can Use Section */}
+            <div className="pt-32">
+              <div>
+                <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-4">
+                  What can i use
+                </h2>
+                <div className="h-1 w-70 bg-primary rounded-full mx-auto md:mx-0"></div>
+              </div>
+              <div
+                style={{
+                  height: "200px",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                {/* Basic horizontal loop */}
+                <LogoLoop
+                  logos={imageLogos}
+                  speed={100}
+                  direction="right"
+                  logoHeight={60}
+                  gap={50}
+                  hoverSpeed={0}
+                  scaleOnHover
+                  showLabel
+                  // fadeOut
+                  // fadeOutColor=""
+                  ariaLabel="Technology partners"
+                />
+              </div>
             </div>
           </div>
 
