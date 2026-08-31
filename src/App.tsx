@@ -108,7 +108,7 @@ function App() {
       {/* 2. KONTEN HALAMAN (SECTIONS) */}
       <main>
         {/* Background Leaf Particles */}
-        <div className="fixed inset-0 z-0 w-full h-full pointer-events-auto">
+        <div className="fixed inset-0 z-0 w-full h-full pointer-events-none">
           <LeafParticles
             particleCount={120}
             particleSpread={15}
@@ -126,6 +126,7 @@ function App() {
         </div>
 
         {/* Hero Section */}
+
         <HeroSection />
 
         {/* About Section */}
