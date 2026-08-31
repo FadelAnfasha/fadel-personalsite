@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import LeafParticles from "@/components/LeafParticles";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import JourneySection from "@/components/sections/JourneySection";
 import { useGLTF, useTexture } from "@react-three/drei";
 import cardGLB from "@/components/Lanyard/card.glb";
 import lanyard from "@/components/Lanyard/lanyard.png";
@@ -72,15 +73,15 @@ function App() {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                href="#projects"
-                onClick={(e) => scrollToSection(e, "projects")}
+                href="#journey"
+                onClick={(e) => scrollToSection(e, "journey")}
                 className={`${navigationMenuTriggerStyle()} ${
-                  activeSection === "projects"
+                  activeSection === "journey"
                     ? "bg-accent text-accent-foreground"
                     : ""
                 }`}
               >
-                Projects
+                Journeys
               </NavigationMenuLink>
             </NavigationMenuItem>
 
@@ -131,6 +132,9 @@ function App() {
 
         {/* About Section */}
         <AboutSection />
+
+        {/* About Section */}
+        <JourneySection />
       </main>
     </div>
   );

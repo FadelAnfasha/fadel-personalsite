@@ -80,10 +80,10 @@ export default function AboutSection() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             {/* Judul Section */}
             <div>
-              <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
                 About Me
               </h2>
-              <div className="h-1 w-56 bg-primary rounded-full mx-auto md:mx-0"></div>
+              <div className="h-1 w-45 md:w-56 bg-primary rounded-full mx-auto md:mx-0"></div>
             </div>
 
             {/* Deskripsi Naratif */}
@@ -107,7 +107,7 @@ export default function AboutSection() {
             </div>
 
             {/* Download CV Button */}
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center md:justify-start">
               <a href="/cv.pdf" download>
                 <Button
                   variant="default"
@@ -121,18 +121,19 @@ export default function AboutSection() {
             </div>
 
             {/* What I Can Use Section */}
-            <div className="pt-32">
+            <div className="pt-8">
               <div>
-                <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-4">
+                <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
                   What can i use
                 </h2>
-                <div className="h-1 w-70 bg-primary rounded-full mx-auto md:mx-0"></div>
+                <div className="h-1 w-65 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>
               </div>
               <div
                 style={{
                   height: "200px",
                   position: "relative",
                   overflow: "hidden",
+                  padding: "20px",
                 }}
               >
                 {/* Basic horizontal loop */}
@@ -155,10 +156,10 @@ export default function AboutSection() {
 
           {/* Kolom Kanan: 3 Kartu Current Activities */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <h3 className="text-2xl font-semibold text-foreground mb-2">
+            <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
               Current Activities
-            </h3>
-
+            </h2>
+            <div className="h-1 w-80 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>{" "}
             {/* Card 1: Building */}
             <SpotlightCard
               className="custom-spotlight-card"
@@ -186,7 +187,6 @@ export default function AboutSection() {
                 </CardDescription>
               </CardContent>
             </SpotlightCard>
-
             {/* Card 2: Exploring AI */}
             <SpotlightCard
               className="custom-spotlight-card"
@@ -208,7 +208,6 @@ export default function AboutSection() {
                 </CardDescription>
               </CardContent>
             </SpotlightCard>
-
             {/* Card 3: Learning Fullstack Development */}
             <SpotlightCard
               className="custom-spotlight-card"
