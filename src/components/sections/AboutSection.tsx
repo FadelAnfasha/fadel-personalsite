@@ -156,10 +156,10 @@ export default function AboutSection() {
 
           {/* Kolom Kanan: 3 Kartu Current Activities */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
+            <h2 className="text-4xl text-center md:text-center md:text-5xl font-bold text-foreground mb-2">
               Current Activities
             </h2>
-            <div className="h-1 w-80 md:w-105 bg-primary rounded-full mx-auto md:mx-0"></div>
+            <div className="h-1 w-80 md:w-105  bg-primary rounded-full mx-auto "></div>
             {/* Card 1: Building */}
             <SpotlightCard
               className="custom-spotlight-card"
