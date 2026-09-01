@@ -45,6 +45,8 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
     setOpacity(0);
   };
 
+  const isHoveredOrFocused = opacity > 0;
+
   return (
     <div
       ref={divRef}
@@ -53,7 +55,11 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-3xl border border-neutral-800 bg-neutral-900 overflow-hidden p-1 ${className}`}
+      className={`relative rounded-3xl border bg-transparent overflow-hidden p-1 transition-colors duration-300 ${className}`}
+      style={{
+        // Mengubah warna border secara dinamis sesuai spotlightColor saat hover/focus
+        borderColor: isHoveredOrFocused ? spotlightColor : undefined,
+      }}
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out"

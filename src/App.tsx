@@ -87,15 +87,15 @@ function App() {
 
             <NavigationMenuItem>
               <NavigationMenuLink
-                href="#contact"
-                onClick={(e) => scrollToSection(e, "contact")}
+                href="#Another"
+                onClick={(e) => scrollToSection(e, "Another")}
                 className={`${navigationMenuTriggerStyle()} ${
-                  activeSection === "contact"
+                  activeSection === "Another"
                     ? "bg-accent text-accent-foreground"
                     : ""
                 }`}
               >
-                Contact
+                Another
               </NavigationMenuLink>
             </NavigationMenuItem>
 

@@ -10,6 +10,39 @@ import GithubIcon from "@/assets/github.svg";
 import GmailIcon from "@/assets/gmail.svg";
 import WhatsappIcon from "@/assets/whatsapp.svg";
 
+const socialMedia = [
+  {
+    name: "Instagram",
+    href: "https://instagram.com/fadelanfasha",
+    icon: InstagramIcon,
+    spotlightColor: "rgba(225, 48, 108, 0.5)",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/fadelanfashap",
+    icon: LinkedinIcon,
+    spotlightColor: "rgba(10, 102, 194, 0.5)",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/fadelanfasha",
+    icon: GithubIcon,
+    spotlightColor: "rgba(88, 166, 255, 0.5)",
+  },
+  {
+    name: "Email",
+    href: "mailto:fadelanfashap25@gmail.com",
+    icon: GmailIcon,
+    spotlightColor: "rgba(234, 67, 53, 0.5)",
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/628983692104",
+    icon: WhatsappIcon,
+    spotlightColor: "rgba(37, 211, 102, 0.5)",
+  },
+] as const;
+
 export default function HeroSection() {
   return (
     <section
@@ -70,70 +103,22 @@ export default function HeroSection() {
 
         {/* Social Media Buttons */}
         <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4 pointer-events-auto">
-          <SpotlightCard
-            className="p-3 hover:scale-110 transition-transform"
-            spotlightColor="rgba(225, 48, 108, 0.5)"
-          >
-            <a
-              href="https://instagram.com/fadelanfasha"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
+          {socialMedia.map((item) => (
+            <SpotlightCard
+              key={item.name}
+              className="p-3 hover:scale-110 transition-transform"
+              spotlightColor={item.spotlightColor}
             >
-              <img src={InstagramIcon} alt="Instagram" className="size-6" />
-            </a>
-          </SpotlightCard>
-
-          <SpotlightCard
-            className="p-3 hover:scale-110 transition-transform"
-            spotlightColor="rgba(10, 102, 194, 0.5)"
-          >
-            <a
-              href="https://linkedin.com/in/fadelanfashap"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <img src={LinkedinIcon} alt="LinkedIn" className="size-6" />
-            </a>
-          </SpotlightCard>
-
-          <SpotlightCard
-            className="p-3 hover:scale-110 transition-transform"
-            spotlightColor="rgba(88, 166, 255, 0.5)"
-          >
-            <a
-              href="https://github.com/fadelanfasha"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <img src={GithubIcon} alt="GitHub" className="size-6" />
-            </a>
-          </SpotlightCard>
-
-          <SpotlightCard
-            className="p-3 hover:scale-110 transition-transform"
-            spotlightColor="rgba(234, 67, 53, 0.5)"
-          >
-            <a href="mailto:fadelanfashap25@gmail.com" aria-label="Email">
-              <img src={GmailIcon} alt="Email" className="size-6" />
-            </a>
-          </SpotlightCard>
-
-          <SpotlightCard
-            className="p-3 hover:scale-110 transition-transform"
-            spotlightColor="rgba(37, 211, 102, 0.5)"
-          >
-            <a
-              href="https://wa.me/628983692104"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-            >
-              <img src={WhatsappIcon} alt="WhatsApp" className="size-6" />
-            </a>
-          </SpotlightCard>
+              <a
+                href={item.href}
+                target={item.name === "Email" ? "_self" : "_blank"}
+                rel="noopener noreferrer"
+                aria-label={item.name}
+              >
+                <img src={item.icon} alt={item.name} className="size-6" />
+              </a>
+            </SpotlightCard>
+          ))}
         </div>
       </div>
 

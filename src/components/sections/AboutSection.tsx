@@ -10,7 +10,36 @@ import {
 } from "@/components/ui/card";
 import { Download, Code2, Bot, Rocket } from "lucide-react";
 
-const imageLogos = [
+// 1. Bahasa Pemrograman (Languages)
+const languages = [
+  {
+    src: "/icons/php.svg",
+    alt: "PHP",
+    label: "PHP",
+    href: "https://www.php.net",
+  },
+  {
+    src: "/icons/javascript.svg",
+    alt: "JavaScript",
+    label: "JavaScript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    src: "/icons/python.svg",
+    alt: "Python",
+    label: "Python",
+    href: "https://www.python.org",
+  },
+  {
+    src: "/icons/vba.svg",
+    alt: "VBA",
+    label: "VBA",
+    href: "https://docs.microsoft.com/en-us/office/vba",
+  }
+];
+
+// 2. Framework, Library, Database, & Tools
+const tools = [
   {
     src: "/icons/laravel.svg",
     alt: "Laravel",
@@ -36,10 +65,10 @@ const imageLogos = [
     href: "https://github.com/FadelAnfasha",
   },
   {
-    src: "/icons/python.svg",
-    alt: "Python",
-    label: "Python",
-    href: "https://www.python.org",
+    src: "/icons/vscode.svg",
+    alt: "VS Code",
+    label: "VS Code",
+    href: "https://code.visualstudio.com",
   },
   {
     src: "/icons/pandas.svg",
@@ -121,37 +150,56 @@ export default function AboutSection() {
             </div>
 
             {/* What I Can Use Section */}
-            <div className="pt-8">
-              <div>
-                <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
-                  What can i use
-                </h2>
-                <div className="h-1 w-65 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>
-              </div>
-              <div
-                style={{
-                  height: "200px",
-                  position: "relative",
-                  overflow: "hidden",
-                  padding: "20px",
-                }}
-              >
-                {/* Basic horizontal loop */}
-                <LogoLoop
-                  logos={imageLogos}
-                  speed={100}
-                  direction="right"
-                  logoHeight={60}
-                  gap={50}
-                  hoverSpeed={0}
-                  scaleOnHover
-                  showLabel
-                  // fadeOut
-                  // fadeOutColor=""
-                  ariaLabel="Technology partners"
-                />
-              </div>
-            </div>
+            <div className="pt-8 space-y-8">
+  {/* Header Section */}
+  <div>
+    <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
+      What can I use
+    </h2>
+    <div className="h-1 w-65 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>
+  </div>
+
+  {/* Container Loop Tech Stack */}
+  <div className="space-y-6">
+    
+    {/* 1. Baris Languages (Arah Kanan) */}
+    <div className="relative overflow-hidden p-4 rounded-xl bg-card/30 border border-border/40">
+      <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2">
+        Languages
+      </h3>
+      <LogoLoop
+        logos={languages}
+        speed={80}
+        direction="right"
+        logoHeight={50}
+        gap={40}
+        hoverSpeed={0}
+        scaleOnHover
+        showLabel
+        ariaLabel="Programming Languages"
+      />
+    </div>
+
+    {/* 2. Baris Tools & Frameworks (Arah Kiri) */}
+    <div className="relative overflow-hidden p-4 rounded-xl bg-card/30 border border-border/40">
+      <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2">
+        Tools & Frameworks
+      </h3>
+      <LogoLoop
+        logos={tools}
+        speed={100}
+        direction="left"
+        logoHeight={50}
+        gap={40}
+        hoverSpeed={0}
+        scaleOnHover
+        showLabel
+        ariaLabel="Tools and Frameworks"
+      />
+    </div>
+
+  </div>
+</div>
           </div>
 
           {/* Kolom Kanan: 3 Kartu Current Activities */}
