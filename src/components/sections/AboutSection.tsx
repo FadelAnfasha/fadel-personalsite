@@ -1,6 +1,20 @@
 import { Button } from "@/components/ui/button";
 import SpotlightCard from "@/components/ui/SpotlightCard";
 import LogoLoop from "@/components/LogoLoop";
+import phpIcon from "@/assets/icons/tech/php.svg";
+import javascriptIcon from "@/assets/icons/tech/javascript.svg";
+import pythonIcon from "@/assets/icons/tech/python.svg";
+import vbaIcon from "@/assets/icons/tech/vba.svg";
+import laravelIcon from "@/assets/icons/tech/laravel.svg";
+import vueIcon from "@/assets/icons/tech/vue.svg";
+import reactIcon from "@/assets/icons/tech/react.svg";
+import gitIcon from "@/assets/icons/socialmedia/git.svg";
+import vscodeIcon from "@/assets/icons/tech/vscode.svg";
+import pandasIcon from "@/assets/icons/tech/pandas.svg";
+import tensorflowIcon from "@/assets/icons/tech/tensorflow.svg";
+import ollamaIcon from "@/assets/icons/tech/ollama.svg";
+import postgresqlIcon from "@/assets/icons/tech/postgresql.svg";
+import bootstrapIcon from "@/assets/icons/tech/bootstrap.svg";
 
 import {
   CardContent,
@@ -13,86 +27,92 @@ import { Download, Code2, Bot, Rocket } from "lucide-react";
 // 1. Bahasa Pemrograman (Languages)
 const languages = [
   {
-    src: "/icons/php.svg",
+    src: phpIcon,
     alt: "PHP",
     label: "PHP",
     href: "https://www.php.net",
   },
   {
-    src: "/icons/javascript.svg",
+    src: javascriptIcon,
     alt: "JavaScript",
     label: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
-    src: "/icons/python.svg",
+    src: pythonIcon,
     alt: "Python",
     label: "Python",
     href: "https://www.python.org",
   },
   {
-    src: "/icons/vba.svg",
+    src: vbaIcon,
     alt: "VBA",
     label: "VBA",
     href: "https://docs.microsoft.com/en-us/office/vba",
-  }
+  },
 ];
 
 // 2. Framework, Library, Database, & Tools
 const tools = [
   {
-    src: "/icons/laravel.svg",
+    src: laravelIcon,
     alt: "Laravel",
     label: "Laravel",
     href: "https://laravel.com",
   },
   {
-    src: "/icons/vue.svg",
+    src: vueIcon,
     alt: "Vue",
     label: "Vue.js",
     href: "https://vuejs.org",
   },
   {
-    src: "/icons/react.svg",
+    src: reactIcon,
     alt: "React",
     label: "React",
     href: "https://react.dev",
   },
   {
-    src: "/icons/git.svg",
+    src: gitIcon,
     alt: "Github",
     label: "Git",
     href: "https://github.com/FadelAnfasha",
   },
   {
-    src: "/icons/vscode.svg",
+    src: vscodeIcon,
     alt: "VS Code",
     label: "VS Code",
     href: "https://code.visualstudio.com",
   },
   {
-    src: "/icons/pandas.svg",
+    src: pandasIcon,
     alt: "Pandas",
     label: "Pandas",
     href: "https://pandas.pydata.org",
   },
   {
-    src: "/icons/tensorflow.svg",
+    src: tensorflowIcon,
     alt: "TensorFlow",
     label: "TensorFlow",
     href: "https://www.tensorflow.org",
   },
   {
-    src: "/icons/ollama.svg",
+    src: ollamaIcon,
     alt: "Ollama",
     label: "Ollama",
     href: "https://ollama.ai",
   },
   {
-    src: "/icons/postgresql.svg",
+    src: postgresqlIcon,
     alt: "PostgreSQL",
     label: "PostgreSQL",
     href: "https://www.postgresql.org",
+  },
+  {
+    src: bootstrapIcon,
+    alt: "Bootstrap",
+    label: "Bootstrap",
+    href: "https://getbootstrap.com",
   },
 ];
 
@@ -151,55 +171,53 @@ export default function AboutSection() {
 
             {/* What I Can Use Section */}
             <div className="pt-8 space-y-8">
-  {/* Header Section */}
-  <div>
-    <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
-      What can I use
-    </h2>
-    <div className="h-1 w-65 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>
-  </div>
+              {/* Header Section */}
+              <div>
+                <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
+                  What can I use
+                </h2>
+                <div className="h-1 w-65 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>
+              </div>
 
-  {/* Container Loop Tech Stack */}
-  <div className="space-y-6">
-    
-    {/* 1. Baris Languages (Arah Kanan) */}
-    <div className="relative overflow-hidden p-4 rounded-xl bg-card/30 border border-border/40">
-      <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2">
-        Languages
-      </h3>
-      <LogoLoop
-        logos={languages}
-        speed={80}
-        direction="right"
-        logoHeight={50}
-        gap={40}
-        hoverSpeed={0}
-        scaleOnHover
-        showLabel
-        ariaLabel="Programming Languages"
-      />
-    </div>
+              {/* Container Loop Tech Stack */}
+              <div className="space-y-6">
+                {/* 1. Baris Languages (Arah Kanan) */}
+                <div className="relative overflow-hidden p-4 rounded-xl bg-card/30 border border-border/40">
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2">
+                    Languages
+                  </h3>
+                  <LogoLoop
+                    logos={languages}
+                    speed={80}
+                    direction="right"
+                    logoHeight={50}
+                    gap={40}
+                    hoverSpeed={0}
+                    scaleOnHover
+                    showLabel
+                    ariaLabel="Programming Languages"
+                  />
+                </div>
 
-    {/* 2. Baris Tools & Frameworks (Arah Kiri) */}
-    <div className="relative overflow-hidden p-4 rounded-xl bg-card/30 border border-border/40">
-      <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2">
-        Tools & Frameworks
-      </h3>
-      <LogoLoop
-        logos={tools}
-        speed={100}
-        direction="left"
-        logoHeight={50}
-        gap={40}
-        hoverSpeed={0}
-        scaleOnHover
-        showLabel
-        ariaLabel="Tools and Frameworks"
-      />
-    </div>
-
-  </div>
-</div>
+                {/* 2. Baris Tools & Frameworks (Arah Kiri) */}
+                <div className="relative overflow-hidden p-4 rounded-xl bg-card/30 border border-border/40">
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2">
+                    Tools & Frameworks
+                  </h3>
+                  <LogoLoop
+                    logos={tools}
+                    speed={100}
+                    direction="left"
+                    logoHeight={50}
+                    gap={40}
+                    hoverSpeed={0}
+                    scaleOnHover
+                    showLabel
+                    ariaLabel="Tools and Frameworks"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Kolom Kanan: 3 Kartu Current Activities */}

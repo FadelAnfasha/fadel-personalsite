@@ -4,10 +4,17 @@ import SpotlightCard from "@/components/ui/SpotlightCard";
 import { Calendar, Award, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion"; // 1. Import Framer Motion
 
+import topyIcon from "@/assets/icons/company/topy.png";
+import procodecgIcon from "@/assets/icons/company/procodecg.png";
+import telkomIcon from "@/assets/icons/company/telkom.png";
+import topyImage from "@/assets/icons/company/topy.jpg";
+import topy2Image from "@/assets/icons/company/topy2.jpg";
+import geladiImage from "@/assets/icons/company/geladi.jpg";
+
 const careerJourney = [
   {
-    image: "/topy.jpg",
-    icon: "/icons/topy.png",
+    image: topyImage,
+    icon: topyIcon,
     caption: "PT. Topy Palingda Manufacturing Indonesia",
     role: "IT Staff - Finance,Accounting, & Tax Department",
     period: "2024 - 2026",
@@ -27,8 +34,8 @@ const careerJourney = [
     ],
   },
   {
-    image: "/topy2.jpg",
-    icon: "/icons/procodecg.png",
+    image: topy2Image,
+    icon: procodecgIcon,
     caption: "ProCodeCG",
     role: "Internship - Data Annotation",
     period: "2021 - 2021",
@@ -39,8 +46,8 @@ const careerJourney = [
     skills: ["Python", "Pandas", "TensorFlow"],
   },
   {
-    image: "geladi.jpg",
-    icon: "/icons/telkom.png",
+    image: geladiImage,
+    icon: telkomIcon,
     caption: "Telkom Indonesia",
     role: "Internship - Payment, Finance, & Collection Department",
     period: "2020 - 2021",

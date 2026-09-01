@@ -4,11 +4,11 @@ import Lanyard from "@/components/Lanyard/Lanyard";
 import SpotlightCard from "@/components/ui/SpotlightCard";
 
 // Import SVG icons from assets
-import InstagramIcon from "@/assets/instagram.svg";
-import LinkedinIcon from "@/assets/linkedin.svg";
-import GithubIcon from "@/assets/github.svg";
-import GmailIcon from "@/assets/gmail.svg";
-import WhatsappIcon from "@/assets/whatsapp.svg";
+import InstagramIcon from "@/assets/icons/socialmedia/instagram.svg";
+import LinkedinIcon from "@/assets/icons/socialmedia/linkedin.svg";
+import GithubIcon from "@/assets/icons/socialmedia/git.svg";
+import GmailIcon from "@/assets/icons/socialmedia/gmail.svg";
+import WhatsappIcon from "@/assets/icons/socialmedia/whatsapp.svg";
 
 const socialMedia = [
   {
@@ -59,7 +59,7 @@ export default function HeroSection() {
       {/* ========================================================= */}
       {/* 2. LAYER KONTEN TEKS                                      */}
       {/* ========================================================= */}
-      <div className="relative z-10 flex-1 flex flex-col items-center md:items-start text-center md:text-left py-6 pointer-events-none max-w-full overflow-hidden sm:mt-32">
+      <div className="relative md:pl-8 z-10 flex-1 flex flex-col items-center md:items-start text-center md:text-left py-6 pointer-events-none max-w-full overflow-hidden sm:mt-32">
         {/* Hello Text */}
         <div className="flex flex-col gap-4">
           <StrokeText
