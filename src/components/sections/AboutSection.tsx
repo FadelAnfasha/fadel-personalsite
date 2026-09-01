@@ -159,7 +159,7 @@ export default function AboutSection() {
             <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
               Current Activities
             </h2>
-            <div className="h-1 w-80 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>
+            <div className="h-1 w-80 md:w-105 bg-primary rounded-full mx-auto md:mx-0"></div>
             {/* Card 1: Building */}
             <SpotlightCard
               className="custom-spotlight-card"
