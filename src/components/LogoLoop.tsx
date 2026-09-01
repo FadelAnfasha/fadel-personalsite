@@ -20,6 +20,7 @@ export type LogoItem =
       href?: string;
       title?: string;
       label?: string;
+      className?: string;
       srcSet?: string;
       sizes?: string;
       width?: number;
@@ -393,6 +394,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
               "motion-reduce:transition-none",
               scaleOnHover &&
                 "transition-transform duration-300 ease-in-out group-hover/item:scale-120",
+              (item as any).className,
             )}
             src={(item as any).src}
             srcSet={(item as any).srcSet}

@@ -115,7 +115,15 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 aria-label={item.name}
               >
-                <img src={item.icon} alt={item.name} className="size-6" />
+                <img
+                  src={item.icon}
+                  alt={item.name}
+                  className={`size-6 ${
+                    item.name === "GitHub"
+                      ? "dark:brightness-0 dark:invert"
+                      : ""
+                  }`}
+                />
               </a>
             </SpotlightCard>
           ))}
