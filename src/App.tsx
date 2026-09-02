@@ -10,6 +10,7 @@ import LeafParticles from "@/components/LeafParticles";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import JourneySection from "@/components/sections/JourneySection";
+import AgentSection from "@/components/sections/AgentSection";
 import { useGLTF, useTexture } from "@react-three/drei";
 import cardGLB from "@/components/Lanyard/card.glb";
 import lanyard from "@/components/Lanyard/lanyard.png";
@@ -86,6 +87,20 @@ function App() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+              <NavigationMenuLink
+                href="#agent"
+                onClick={(e) => scrollToSection(e, "agent")}
+                className={`${navigationMenuTriggerStyle()} ${
+                  activeSection === "agent"
+                    ? "bg-accent text-accent-foreground"
+                    : ""
+                }`}
+              >
+                Agents
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
               <ThemeToggle />
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -121,6 +136,9 @@ function App() {
 
         {/* About Section */}
         <JourneySection />
+
+        {/* Agent Section */}
+        <AgentSection />
       </main>
     </div>
   );
