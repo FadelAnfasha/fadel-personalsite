@@ -15,6 +15,7 @@ import tensorflowIcon from "@/assets/icons/tech/tensorflow.svg";
 import ollamaIcon from "@/assets/icons/tech/ollama.svg";
 import postgresqlIcon from "@/assets/icons/tech/postgresql.svg";
 import bootstrapIcon from "@/assets/icons/tech/bootstrap.svg";
+import dockerIcon from "@/assets/icons/tech/docker.svg";
 
 import {
   CardContent,
@@ -54,6 +55,13 @@ const languages = [
 
 // 2. Framework, Library, Database, & Tools
 const tools = [
+  {
+    src: dockerIcon,
+    alt: "Docker",
+    label: "Docker",
+    href: "https://www.docker.com",
+    className: "",
+  },
   {
     src: laravelIcon,
     alt: "Laravel",

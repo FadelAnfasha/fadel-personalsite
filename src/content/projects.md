@@ -1,7 +1,7 @@
 ---
 title: "Projects & Portfolio"
 author: "Fadel Anfasha Putra"
-total_projects: 7
+total_projects: 8
 categories:
   - "PT. Topy Palingda Manufacturing Indonesia"
   - "ProCodeCG"
@@ -20,6 +20,7 @@ Daftar proyek dan pencapaian teknis yang dikembangkan oleh Fadel Anfasha Putra:
 - **Deskripsi**: Aplikasi berbasis web internal untuk menghitung variansi harga antara bahan baku aktual dan standar, serta menghitung biaya pemrosesan produksi (*production processing costs*) untuk seluruh produk jadi (*finished goods*).
 - **Teknologi**: `Laravel`, `Vue.js`, `Finance Automation`
 - **Fitur Utama**: Modul kalkulasi variansi bahan baku, modul biaya proses produksi, dan sistem *Request for Service*.
+- **Gambar**: `@/assets/projects/enterprise-template.png`
 
 ---
 
@@ -63,3 +64,11 @@ Daftar proyek dan pencapaian teknis yang dikembangkan oleh Fadel Anfasha Putra:
 - **Deskripsi**: Asisten AI virtual interaktif yang terpasang di situs portofolio untuk menjawab pertanyaan pengunjung terkait profil, riwayat karier, dan proyek yang dikerjakan oleh Fadel secara langsung.
 - **Teknologi**: `Google Gemini 2.5 Flash API`, `Vue.js 3`, `Marked.js`, `Vuetify`
 - **Tautan Website**: [https://porto-with-ai.vercel.app](https://porto-with-ai.vercel.app)
+
+---
+
+## 8. HikeSplit
+- **Kategori / Organisasi**: Personal Project
+- **Deskripsi**: Aplikasi split bill untuk hiking yang membantu pengguna membagi biaya perjalanan secara adil dan transparan.
+- **Teknologi**: `Vue.js`, `Vercel`
+- **Gambar**: `@/assets/projects/hikesplit.png`
