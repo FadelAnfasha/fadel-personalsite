@@ -23,7 +23,7 @@ const INITIAL_MESSAGES: Message[] = [
     id: "init-1",
     role: "assistant",
     content:
-      "Halo! Saya AI Assistant-nya Fadel. Ada yang ingin kamu tanyakan tentang Fadel?",
+      "Hello, i'm Fadel personal assistant. Feel free to ask me anything about Fadel Anfasha Putra.",
     timestamp: Date.now(),
   },
 ];
