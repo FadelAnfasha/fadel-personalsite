@@ -79,10 +79,10 @@ export default function CareerDetail() {
     >
       <div className="max-w-7xl mx-auto space-y-8">
         <div>
-          <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
+          <h2 className="text-4xl text-center md:text-center md:text-5xl font-bold text-foreground mb-2">
             Career Journey
           </h2>
-          <div className="h-1 w-65 md:w-90 bg-primary rounded-full mx-auto md:mx-0"></div>
+          <div className="h-1 w-65 md:w-90 bg-primary rounded-full mx-auto "></div>
         </div>
       </div>
 

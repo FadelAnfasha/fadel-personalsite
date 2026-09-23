@@ -1,7 +1,7 @@
 ---
 title: "Projects & Portfolio"
 author: "Fadel Anfasha Putra"
-total_projects: 8
+total_projects: 10
 categories:
   - "PT. Topy Palingda Manufacturing Indonesia"
   - "ProCodeCG"
@@ -62,13 +62,29 @@ Daftar proyek dan pencapaian teknis yang dikembangkan oleh Fadel Anfasha Putra:
 ## 7. PortoBot AI (Interactive AI Chat Assistant)
 - **Kategori / Organisasi**: Personal Portfolio Feature
 - **Deskripsi**: Asisten AI virtual interaktif yang terpasang di situs portofolio untuk menjawab pertanyaan pengunjung terkait profil, riwayat karier, dan proyek yang dikerjakan oleh Fadel secara langsung.
-- **Teknologi**: `Google Gemini 2.5 Flash API`, `Vue.js 3`, `Marked.js`, `Vuetify`
-- **Tautan Website**: [https://porto-with-ai.vercel.app](https://porto-with-ai.vercel.app)
+- **Teknologi**: `React`, `TypeScript`, `Google Gemini 2.5 Flash API`
+- **Tautan Website**: [https://fadel-personalsite.vercel.app](https://fadel-personalsite.vercel.app)
 
 ---
 
 ## 8. HikeSplit
 - **Kategori / Organisasi**: Personal Project
 - **Deskripsi**: Aplikasi split bill untuk hiking yang membantu pengguna membagi biaya perjalanan secara adil dan transparan.
-- **Teknologi**: `Vue.js`, `Vercel`
+- **Teknologi**: `React.js`, `Node.js`
 - **Gambar**: `@/assets/projects/hikesplit.png`
+
+---
+
+## 9. Enterprise Template App
+- **Kategori / Organisasi**: Personal Project (2026)
+- **Deskripsi**: Template aplikasi enterprise siap pakai sebagai fondasi pengembangan aplikasi enterprise (finance, inventory, dsb.).
+- **Teknologi**: `Laravel`, `Vue.js`
+- **Gambar**: `@/assets/projects/enterprise-template.png`
+
+---
+
+## 10. SIMRS (Sistem Informasi Manajemen Rumah Sakit)
+- **Kategori / Organisasi**: Personal Project (2026)
+- **Deskripsi**: Sistem informasi manajemen rumah sakit — pengelolaan data pasien, rawat inap, dan operasional rumah sakit terintegrasi.
+- **Teknologi**: `React.js`, `Laravel`
+- **Gambar**: `@/assets/projects/simrs.png`

@@ -30,6 +30,12 @@ skills:
     level: "Intermediate"
   - name: "VBA / Excel Macros"
     level: "Advanced"
+  - name: "React"
+    level: "Beginner"
+  - name: "PostgreSQL"
+    level: "Beginner"
+  - name: "Docker"
+    level: "Beginner"
 ---
 
 # Tentang Saya
@@ -75,7 +81,7 @@ skills:
 
 ### 1. PT. Topy Palingda Manufacturing Indonesia (2024 – 2026)
 
-- **Posisi**: Supervisor of Finance, Accounting, & Tax Department
+- **Posisi**: IT Staff - Finance, Accounting, & Tax Department
 - **Fokus**: Memimpin digitalisasi proses finansial dan mengembangkan aplikasi web internal untuk meningkatkan efisiensi departemen.
 - **Pencapaian**:
   - Membangun aplikasi web internal untuk menghitung variansi harga bahan baku (aktual vs standar) serta biaya proses produksi finished goods.
@@ -89,7 +95,7 @@ skills:
 - **Posisi**: AI Internship
 - **Fokus**: Persiapan data dan pelabelan data (blueprint) untuk melatih model Machine Learning pengenalan tipe sudut bangunan arsitektur.
 
-### 3. Telkom Indonesia - Witel Karawang (2020)
+### 3. Telkom Indonesia - Witel Karawang (2020 – 2021)
 
 - **Posisi**: Internship
 - **Fokus**: Membangun solusi ChatBot Telegram otomatis untuk sistem monitoring status langganan pelanggan secara real-time.

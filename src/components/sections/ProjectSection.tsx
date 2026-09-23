@@ -50,7 +50,7 @@ const projects: Project[] = [
     org: "Personal Project",
     period: "2026",
     description:
-      "SIMRS (Sistem Informasi Manajemen Rumah Sakit) is a hospital information management xsystem.",
+      "SIMRS (Sistem Informasi Manajemen Rumah Sakit) is a hospital information management system.",
     tech: ["React.js", "Laravel"],
   },
 ];
@@ -78,10 +78,10 @@ export default function ProjectSection() {
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div>
-          <h2 className="text-4xl text-center md:text-left md:text-5xl font-bold text-foreground mb-2">
+          <h2 className="text-4xl text-center md:text-center md:text-5xl font-bold text-foreground mb-2">
             Projects
           </h2>
-          <div className="h-1 w-40 md:w-50  bg-primary rounded-full mx-auto md:mx-0"></div>
+          <div className="h-1 w-40 md:w-50 bg-primary rounded-full mx-auto "></div>
         </div>
 
         {/* Carousel */}
