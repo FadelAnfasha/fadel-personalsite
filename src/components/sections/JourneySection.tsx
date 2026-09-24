@@ -50,7 +50,7 @@ const careerJourney = [
     icon: telkomIcon,
     caption: "Telkom Indonesia",
     role: "Internship - Payment, Finance, & Collection Department",
-    period: "2020 - 2021",
+    period: "2020 - 2020",
     location: "Karawang, Indonesia",
     achievements: [
       "Creating Telegram ChatBot for real-time monitoring of customers subscription statuses.",
