@@ -13,14 +13,14 @@ import JourneySection from "@/components/sections/JourneySection";
 import ProjectSection from "@/components/sections/ProjectSection";
 import AgentSection from "@/components/sections/AgentSection";
 import { useGLTF, useTexture } from "@react-three/drei";
-import cardGLB from "@/components/Lanyard/card.glb";
-import lanyard from "@/components/Lanyard/lanyard.png";
+import cardGLBUrl from "@/components/Lanyard/card.glb?url";
+import lanyardUrl from "@/components/Lanyard/lanyard.png?url";
 import { useState } from "react";
 
 import "./App.css";
 export function preloadLanyardAssets() {
-  useGLTF.preload(cardGLB);
-  useTexture.preload(lanyard);
+  useGLTF.preload(cardGLBUrl);
+  useTexture.preload(lanyardUrl);
 }
 function App() {
   // State untuk melacak active section

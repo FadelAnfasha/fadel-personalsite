@@ -27,7 +27,7 @@ import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
 
 // replace with your own imports, see the usage snippet for details
-import cardGLB from "./card.glb";
+import cardGLBUrl from "./card.glb?url";
 import lanyard from "./lanyard.png";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
@@ -198,7 +198,7 @@ function Band({
     return body.lerped;
   };
 
-  const { nodes, materials } = useGLTF(cardGLB) as any;
+  const { nodes, materials } = useGLTF(cardGLBUrl) as any;
   const texture = useTexture(lanyardImage || lanyard);
   // useTexture must be called unconditionally; use a blank pixel when an image
   // isn't supplied for a given face, then skip compositing it below.

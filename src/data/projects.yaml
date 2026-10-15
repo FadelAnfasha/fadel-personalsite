@@ -1,19 +1,31 @@
 projects:
+  - id: 24card
+    title: 24Card
+    description: "Real-time multiplayer card game **24**. Arrange 4 cards into a formula that equals exactly **24**, bluff your opponents, and win as the player with the fewest penalty cards. Texas cowboy bar themed."
+    tech: ["Express", "Tailwind CSS", "TypeScript"]
+    image: "/projects/24card.png"
+    url: "https://github.com/FadelAnfasha/24Card.git"
   - id: enterprise-template
     title: Enterprise-Template
-    description: Starter boilerplate untuk membangun aplikasi enterprise-scale dengan arsitektur modern. Menggabungkan kekuatan Laravel sebagai backend API dan Vue.js sebagai frontend framework yang responsif dan interaktif.
+    description: "Starter boilerplate for building enterprise-scale applications with modern architecture. Combines the power of Laravel as a backend API and Vue.js as a responsive and interactive frontend framework."
     tech: ["Laravel", "Node.js", "Tailwind CSS", "TypeScript", "Vue"]
     image: "/projects/enterprise-template.png"
     url: "https://github.com/FadelAnfasha/Enterprise-Template.git"
+  - id: finacc
+    title: FinAcc
+    description: "Web application for automatic standard cost calculation at industrial scale. FinAcc enables manufacturing and industrial companies to manage cost accounting accurately and efficiently through an intuitive dashboard and comprehensive reporting."
+    tech: ["Laravel", "Tailwind CSS", "TypeScript", "Vue"]
+    image: "/projects/finacc.png"
+    url: "https://github.com/FadelAnfasha/FinAcc.git"
   - id: hikesplit
     title: HikeSplit
-    description: This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.  Currently, two official plugins are available:
+    description: "This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules."
     tech: ["React", "Tailwind CSS", "TypeScript"]
     image: "/projects/hikesplit.png"
     url: "https://github.com/FadelAnfasha/HikeSplit.git"
   - id: simrs---monorepo
     title: SIMRS - Monorepo
-    description: Aplikasi terintegrasi untuk manajemen rumah sakit modern. Mengelola data pasien, rekam medis, jadwal dokter, apotek, dan operasional rumah sakit lainnya dalam satu platform yang efisien.
+    description: "Integrated application for modern hospital management. Manage patient data, electronic medical records, doctor schedules, pharmacy, and other hospital operations in one efficient platform."
     tech: ["Laravel", "Node.js", "Tailwind CSS", "TypeScript", "Vue"]
     image: "/projects/simrs---monorepo.png"
     url: "https://github.com/FadelAnfasha/SIMRS-Monorepo.git"
