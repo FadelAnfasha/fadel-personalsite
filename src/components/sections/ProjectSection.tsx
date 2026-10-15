@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import SpotlightCard from "@/components/ui/SpotlightCard";
 import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
@@ -10,55 +10,33 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-
-import enterpriseImage from "@/assets/projects/enterprise-template.png";
-import hikesplitImage from "@/assets/projects/hikesplit.png";
-import simrsImage from "@/assets/projects/simrs.png";
+import { load as loadYaml } from "js-yaml";
+import projectsYaml from "@/data/projects.yaml?raw";
 
 interface Project {
-  image: string;
+  id: string;
   title: string;
-  org: string;
-  period: string;
   description: string;
-  tech: string[];
-  url?: string;
+  tech: string[] | null;
+  image: string | null;
+  url: string | null;
 }
-
-const projects: Project[] = [
-  {
-    image: enterpriseImage,
-    title: "Enterprise Template App",
-    org: "Personal Project",
-    period: "2026",
-    description:
-      "Starter template App to help you build your own enterprise app.",
-    tech: ["Laravel", "Vue.js"],
-  },
-  {
-    image: hikesplitImage,
-    title: "HikeSplit",
-    org: "Personal Project",
-    period: "2026",
-    description:
-      "HikeSplit is an app to help you split the cost between your group of your hikes.",
-    tech: ["React.js", "Node.js"],
-  },
-  {
-    image: simrsImage,
-    title: "SIMRS",
-    org: "Personal Project",
-    period: "2026",
-    description:
-      "SIMRS (Sistem Informasi Manajemen Rumah Sakit) is a hospital information management system.",
-    tech: ["React.js", "Laravel"],
-  },
-];
 
 export default function ProjectSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+
+  // Parse YAML once
+  const projects = useMemo(() => {
+    try {
+      const data = loadYaml(projectsYaml) as { projects: Project[] };
+      return data?.projects || [];
+    } catch (err) {
+      console.error("Failed to parse projects.yaml:", err);
+      return [];
+    }
+  }, []);
 
   const onApiChange = (api: CarouselApi) => {
     if (!api) return;
@@ -69,6 +47,17 @@ export default function ProjectSection() {
       setCurrent(api.selectedScrollSnap());
     });
   };
+
+  if (projects.length === 0) {
+    return (
+      <section id="project" className="relative min-h-screen w-full py-16 px-6 md:px-16 lg:px-24 bg-background pt-24 pb-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center text-muted-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">Projects</h2>
+          <p>No projects found</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -89,7 +78,7 @@ export default function ProjectSection() {
           <Carousel setApi={onApiChange} opts={{ align: "start" }}>
             <CarouselContent>
               {projects.map((project) => (
-                <CarouselItem key={project.title}>
+                <CarouselItem key={project.id}>
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -102,14 +91,16 @@ export default function ProjectSection() {
                     >
                       <div className="rounded-2xl bg-card border border-border overflow-hidden flex flex-col">
                         {/* Image */}
-                        <div className="relative aspect-video overflow-hidden bg-muted">
-                          <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-full h-full object-fit"
-                            draggable={false}
-                          />
-                        </div>
+                        {project.image && (
+                          <div className="relative aspect-video overflow-hidden bg-muted">
+                            <img
+                              src={project.image}
+                              alt={project.title}
+                              className="w-full h-full object-cover"
+                              draggable={false}
+                            />
+                          </div>
+                        )}
 
                         {/* Content */}
                         <div className="p-5 sm:p-6 flex flex-col">
@@ -119,7 +110,7 @@ export default function ProjectSection() {
                                 {project.title}
                               </h3>
                               <p className="text-sm text-muted-foreground mt-0.5">
-                                {project.org} • {project.period}
+                                Personal Project • 2026
                               </p>
                             </div>
                             {project.url && (
@@ -139,16 +130,18 @@ export default function ProjectSection() {
                             {project.description}
                           </p>
 
-                          <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/50">
-                            {project.tech.map((t) => (
-                              <span
-                                key={t}
-                                className="text-[11px] sm:text-xs px-2.5 py-0.5 rounded-md bg-primary/10 text-primary border border-primary/20 font-medium"
-                              >
-                                {t}
-                              </span>
-                            ))}
-                          </div>
+                          {project.tech && project.tech.length > 0 && (
+                            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/50">
+                              {project.tech.map((t) => (
+                                <span
+                                  key={t}
+                                  className="text-[11px] sm:text-xs px-2.5 py-0.5 rounded-md bg-primary/10 text-primary border border-primary/20 font-medium"
+                                >
+                                  {t}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       </div>
                     </SpotlightCard>

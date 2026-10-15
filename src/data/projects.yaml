@@ -1,0 +1,19 @@
+projects:
+  - id: enterprise-template
+    title: Enterprise-Template
+    description: Starter boilerplate untuk membangun aplikasi enterprise-scale dengan arsitektur modern. Menggabungkan kekuatan Laravel sebagai backend API dan Vue.js sebagai frontend framework yang responsif dan interaktif.
+    tech: ["Laravel", "Node.js", "Tailwind CSS", "TypeScript", "Vue"]
+    image: "/projects/enterprise-template.png"
+    url: "https://github.com/FadelAnfasha/Enterprise-Template.git"
+  - id: hikesplit
+    title: HikeSplit
+    description: This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.  Currently, two official plugins are available:
+    tech: ["React", "Tailwind CSS", "TypeScript"]
+    image: "/projects/hikesplit.png"
+    url: "https://github.com/FadelAnfasha/HikeSplit.git"
+  - id: simrs---monorepo
+    title: SIMRS - Monorepo
+    description: Aplikasi terintegrasi untuk manajemen rumah sakit modern. Mengelola data pasien, rekam medis, jadwal dokter, apotek, dan operasional rumah sakit lainnya dalam satu platform yang efisien.
+    tech: ["Laravel", "Node.js", "Tailwind CSS", "TypeScript", "Vue"]
+    image: "/projects/simrs---monorepo.png"
+    url: "https://github.com/FadelAnfasha/SIMRS-Monorepo.git"
