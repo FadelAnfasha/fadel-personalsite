@@ -110,7 +110,9 @@ export default function ProjectSection() {
                                 {project.title}
                               </h3>
                               <p className="text-sm text-muted-foreground mt-0.5">
-                                Personal Project • 2026
+                                {project.title === "FinAcc"
+                                  ? "PT. Topy Palingda Manufacturing Indonesia"
+                                  : "Personal Project • 2026"}
                               </p>
                             </div>
                             {project.url && (
